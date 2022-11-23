@@ -527,7 +527,6 @@
         </div>
         <div class="footer-sign-up">
           <p class="footer-sign-up-title">Підпишіться на розсилку</p>
-
           <form
             class="sign-up-form"
             name="sign-up"
@@ -561,31 +560,37 @@
         <form
           class="contacts-form"
           name="contacts"
-          autocomplete="on"
+          autocomplete="off"
           novalidate
         >
           <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
 
           <div class="form-field">
             <label for="user_name">Ім'я</label>
-            <input type="text" name="username" id="user_name" autofocus />
-            <svg class="form-icon" width="12" height="12">
+            <input
+              type="text"
+              name="username"
+              id="user_name"
+              autofocus
+              required
+            />
+            <svg class="form-icon">
               <use href="./images/icons.svg#icon-form-name"></use>
             </svg>
           </div>
 
           <div class="form-field">
             <label for="user_phone">Телефон</label>
-            <input type="tel" name="userphone" id="user_phone" />
-            <svg class="form-icon" width="14" height="14">
+            <input type="tel" name="userphone" id="user_phone" required />
+            <svg class="form-icon">
               <use href="./images/icons.svg#icon-form-phone"></use>
             </svg>
           </div>
 
           <div class="form-field">
             <label for="user_email">Пошта</label>
-            <input type="email" name="useremail" id="user_email" />
-            <svg class="form-icon" width="16" height="12">
+            <input type="email" name="useremail" id="user_email" required />
+            <svg class="form-icon">
               <use href="./images/icons.svg#icon-form-mail"></use>
             </svg>
           </div>
@@ -595,16 +600,27 @@
             <textarea
               name="usercomments"
               id="user_comments"
-              rows="5"
+              class=""
               placeholder="Введіть текст"
             ></textarea>
           </div>
 
           <div class="form-field-policy">
-            <input type="checkbox" name="policy" id="policy" />
-            <label for="policy"
-              >Погоджуюся з розсилкою та приймаю
-              <a href="" class="policy-link">Умови договору</a></label
+            <label for="policy">
+              <input
+                type="checkbox"
+                name="policy"
+                id="policy"
+                class="policy-checkbox"
+              />
+              <svg class="policy-checkbox-icon">
+                <use href="./images/icons.svg#icon-checkbox"></use>
+              </svg>
+              <svg class="policy-check-icon">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+              Погоджуюся з розсилкою та приймаю
+              <a href="" class="policy-link"> Умови договору</a></label
             >
           </div>
 
